@@ -69,10 +69,6 @@ foreach ($clients_array as $client) {
 					echo '<b>Switch name:</b> ' . $device->name . '<br>';
 					echo '<b>Switch port:</b> ' . $client->sw_port . '<br>';
 					
-					echo '<pre>';
-					var_dump($client);
-					echo '</pre>';
-					
 				}
 				
 			}
