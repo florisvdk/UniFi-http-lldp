@@ -27,10 +27,10 @@ $unifi_connection = new UniFi_API\Client($controlleruser, $controllerpassword, $
 $set_debug_mode   = $unifi_connection->set_debug($debug);
 $loginresults     = $unifi_connection->login();
 
+// get client and device info
 
-// get client info
-
-$clients_array    = $unifi_connection->list_clients();
+$clients_array = $unifi_connection->list_clients();
+$devices_array = $unifi_connection->list_devices();
 
 // loop trugh clients
 
@@ -59,13 +59,25 @@ foreach ($clients_array as $client) {
 		
 		if ($client->is_wired == true) {
 			
-			echo '<b>Connection type: </b>Wired<br>';
+			// loop trugh devices
+			
+			foreach ($devices_array as $device) {
+				
+				if ($device->mac == $client->sw_mac ) {
+					
+					echo '<b>Connection type: </b> <i class="fas fa-plug"></i><br>';
+					echo '<b>Switch name:</b> ' . $device->name . '<br>';
+					echo '<b>Switch port:</b> ' . $client->sw_port . '<br>';
+					
+					echo '<pre>';
+					var_dump($client);
+					echo '</pre>';
+					
+				}
+				
+			}
 			
 		} else {
-			
-			// get ap data
-			
-			$devices_array = $unifi_connection->list_devices();
 			
 			// loop trugh devices
 			

@@ -23,6 +23,5 @@ It uses following librarys:
 
 ## Known issues
 
-*   Wired connections is not finished
 *   If ip is not found Nothing is displayed
 *   Not csp ready
