@@ -7,7 +7,7 @@ UniFi http lldp is a php written application that gives a simple page with the c
 
 It uses [this UniFi-API-client for php](https://github.com/Art-of-WiFi/UniFi-API-client/) to connect to the unifi controller and get information.
 It searches based on the connection client's IP address for whitch it searches in the configured site (working to add a all site mode) this can be usefull for remote support personel to quiqly identify the users switchport or AP.
-It uses following librarys:
+It uses following libraries:
 
 *   Bootstrap (loaded via cdn)
 *   Jquery (loaded via cdn)
