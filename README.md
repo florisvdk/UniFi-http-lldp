@@ -1,5 +1,5 @@
 # UniFi-http-lldp
-UniFi http lldp is a php written plication that gives a simple page with the connecting device connection information:
+UniFi http lldp is a php written application that gives a simple page with the connecting device connection information:
 
 *   Client name
 *   Connection type (wired or wireless)
